@@ -1,9 +1,9 @@
 # Install
 
-## Server
+### Server
 ```curl -sSL https://your-url.com/setup-bp-server.sh | sudo bash -s -- -d <bp.example.com> -g```
 
-## Client 
+### Client 
 ```curl -sSL https://your-url.com/setup-bp-client.sh | sudo bash -s -- -d <bp.example.com> -t <YOUR_TOKEN> -n <my-laptop>```
 
 # BoringProxy Scripts
