@@ -2,6 +2,8 @@
 
 # --- Argument Parsing ---
 GATEWAY_PORTS=false
+SSH_DIR="/home/boringproxy/.ssh"
+AUTH_KEYS="$SSH_DIR/authorized_keys"
 
 while getopts "d:g" opt; do
   case $opt in
@@ -38,6 +40,20 @@ fi
 # --- System Setup ---
 if ! id "boringproxy" &>/dev/null; then
     sudo useradd -r -m -s /bin/false boringproxy
+fi
+
+if [ ! -d "$SSH_DIR" ]; then
+    echo "Creating $SSH_DIR..."
+    sudo mkdir -p "$SSH_DIR"
+    sudo chown boringproxy:boringproxy "$SSH_DIR"
+    sudo chmod 700 "$SSH_DIR"
+fi
+
+if [ ! -f "$AUTH_KEYS" ]; then
+    echo "Creating $AUTH_KEYS..."
+    sudo touch "$AUTH_KEYS"
+    sudo chown boringproxy:boringproxy "$AUTH_KEYS"
+    sudo chmod 600 "$AUTH_KEYS"
 fi
 
 sudo setcap cap_net_bind_service=+ep "$BP_BINARY"
