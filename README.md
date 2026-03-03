@@ -1,10 +1,14 @@
 # Install
 
 ### Server
-```curl -sSL https://raw.githubusercontent.com/vertelab/boringproxy/refs/heads/main/boring_server_setup.sh | sudo bash -s -- -d <bp.example.com> -g```
+```
+curl -sSL https://raw.githubusercontent.com/vertelab/boringproxy/refs/heads/main/boring_server_setup.sh | sudo bash -s -- -d <bp.example.com> -g
+```
 
 ### Client 
-```curl -sSL https://raw.githubusercontent.com/vertelab/boringproxy/refs/heads/main/boring_client_setup.sh | sudo bash -s -- -d <bp.example.com> -t <YOUR_TOKEN> -n <my-laptop>```
+```
+curl -sSL https://raw.githubusercontent.com/vertelab/boringproxy/refs/heads/main/boring_client_setup.sh | sudo bash -s -- -d <bp.example.com> -t <YOUR_TOKEN> -n <my-laptop>
+```
 
 # BoringProxy Scripts
 
@@ -15,7 +19,9 @@ Thes scripts setup **boringproxy** as a service.
 Run this script on your **VPS** (the machine with the public IP) to host the BoringProxy manager and dashboard.
 
 ### Usage
-```sudo ./boring_server_setup.sh -d <admin-domain> [-g]```
+```
+sudo ./boring_server_setup.sh -d <admin-domain> [-g]
+```
 
 ## Flag Breakdown
 | Flag | Name | Required | Description |
@@ -28,7 +34,9 @@ Run this script on your **VPS** (the machine with the public IP) to host the Bor
 Run this script on the client machine
 
 ### Usage
-```sudo ./boring_client_setup.sh -s <server-domain> -t <token> [-n <client-name>]```
+```
+sudo ./boring_client_setup.sh -s <server-domain> -t <token> [-n <client-name>]
+```
 
 ## Flag Breakdown
 | Flag | Name | Required | Description | 
