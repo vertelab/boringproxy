@@ -1,10 +1,10 @@
 # Install
 
 ### Server
-```curl -sSL https://your-url.com/setup-bp-server.sh | sudo bash -s -- -d <bp.example.com> -g```
+```curl -sSL https://raw.githubusercontent.com/vertelab/boringproxy/refs/heads/main/boring_server_setup.sh | sudo bash -s -- -d <bp.example.com> -g```
 
 ### Client 
-```curl -sSL https://your-url.com/setup-bp-client.sh | sudo bash -s -- -d <bp.example.com> -t <YOUR_TOKEN> -n <my-laptop>```
+```curl -sSL https://raw.githubusercontent.com/vertelab/boringproxy/refs/heads/main/boring_client_setup.sh | sudo bash -s -- -d <bp.example.com> -t <YOUR_TOKEN> -n <my-laptop>```
 
 # BoringProxy Scripts
 
