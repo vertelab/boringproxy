@@ -10,12 +10,12 @@
 
 Thes scripts setup **boringproxy** as a service.
 
-## 🛠 Server Script: `setup-bp-server.sh`
+## 🛠 Server Script: `boring_server_setup.sh`
 
 Run this script on your **VPS** (the machine with the public IP) to host the BoringProxy manager and dashboard.
 
 ### Usage
-```sudo ./setup-bp-server.sh -d <admin-domain> [-g]```
+```sudo ./boring_server_setup.sh -d <admin-domain> [-g]```
 
 ## Flag Breakdown
 | Flag | Name | Required | Description |
@@ -23,12 +23,12 @@ Run this script on your **VPS** (the machine with the public IP) to host the Bor
 | -d | Domain | Yes | The domain (e.g., proxy.yourdomain.com)where the BoringProxy dashboard will live. The script uses this to automate SSL certificates. |
 | -g | GatewayPorts | No | Highly Recommended. This flag modifies /etc/ssh/sshd_config to allow your tunnels to be reached from the public internet. Without this, tunnels may only be accessible via localhost. |
 
-## 💻 Client Script: `setup-bp-client.sh`
+## 💻 Client Script: `boring_client_setup.sh`
 
 Run this script on the client machine
 
 ### Usage
-```sudo ./setup-bp-client.sh -s <server-domain> -t <token> [-n <client-name>]```
+```sudo ./boring_client_setup.sh -s <server-domain> -t <token> [-n <client-name>]```
 
 ## Flag Breakdown
 | Flag | Name | Required | Description | 
