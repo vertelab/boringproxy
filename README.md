@@ -10,8 +10,6 @@
 
 Thes scripts setup **boringproxy** as a service.
 
----
-
 ## 🛠 Server Script: `setup-bp-server.sh`
 
 Run this script on your **VPS** (the machine with the public IP) to host the BoringProxy manager and dashboard.
