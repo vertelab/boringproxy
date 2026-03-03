@@ -21,6 +21,9 @@ fi
 
 BP_BINARY="/usr/local/bin/boringproxy"
 
+sudo curl -L https://github.com/boringproxy/boringproxy/releases/latest/download/boringproxy-linux-x86_64 -o "$BP_BINARY"
+sudo chmod +x "$BP_BINARY"
+
 # --- System Setup ---
 if ! id "boringproxy" &>/dev/null; then
     sudo useradd -r -m -s /bin/false boringproxy
