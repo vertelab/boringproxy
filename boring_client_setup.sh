@@ -3,19 +3,19 @@
 # --- Argument Parsing ---
 CLIENT_NAME=$(hostname) # Default name is the machine's hostname
 
-while getopts "s:t:n:" opt; do
+while getopts "d:t:n:" opt; do
   case $opt in
-    s) SERVER_DOMAIN="$OPTARG" ;;
+    d) SERVER_DOMAIN="$OPTARG" ;;
     t) TOKEN="$OPTARG" ;;
     n) CLIENT_NAME="$OPTARG" ;;
-    *) echo "Usage: $0 -s <server-domain> -t <token> [-n <client-name>]"; exit 1 ;;
+    *) echo "Usage: $0 -d <domain> -t <token> [-n <client-name>]"; exit 1 ;;
   esac
 done
 
 # Check mandatory fields
 if [ -z "$SERVER_DOMAIN" ] || [ -z "$TOKEN" ]; then
-    echo "Error: Server domain (-s) and Token (-t) are mandatory."
-    echo "Usage: $0 -s your-domain.com -t your_token_here [-n custom-name]"
+    echo "Error: Server domain (-d) and Token (-t) are mandatory."
+    echo "Usage: $0 -d your-domain.com -t your_token_here [-n custom-name]"
     exit 1
 fi
 
