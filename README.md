@@ -1,6 +1,14 @@
-# BoringProxy Service Setup Guide
+# Install
 
-This guide explains how to use the automation scripts to install **BoringProxy** as a system service. These scripts handle user creation, security permissions, and automatic restarts.
+## Server
+```curl -sSL https://your-url.com/setup-bp-server.sh | sudo bash -s -- -d <bp.example.com> -g```
+
+## Client 
+```curl -sSL https://your-url.com/setup-bp-client.sh | sudo bash -s -- -d <bp.example.com> -t <YOUR_TOKEN> -n <my-laptop>```
+
+# BoringProxy Scripts
+
+Thes scripts setup **boringproxy** as a service.
 
 ---
 
